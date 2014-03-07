@@ -21,8 +21,8 @@ class Listener
     /**
      * Alters front controller output.
      *
-     * @param XenForo_FrontController $fc     The XenForo front controller.
-     * @param string                  $output The view output.
+     * @param \XenForo_FrontController $fc     The XenForo front controller.
+     * @param string                   $output The view output.
      */
     public static function frontControllerPostView(\XenForo_FrontController $fc, &$output)
     {
@@ -37,8 +37,8 @@ class Listener
     /**
      * Adds filesums to the XenForo File Health Check.
      *
-     * @param XenForo_ControllerAdmin_Abstract $controller The current admin controller
-     * @param array                            $hashes     An array of filesums
+     * @param \XenForo_ControllerAdmin_Abstract $controller The current admin controller
+     * @param array                             $hashes     An array of filesums
      */
     public static function fileHealthCheck(\XenForo_ControllerAdmin_Abstract $controller, array &$hashes)
     {
