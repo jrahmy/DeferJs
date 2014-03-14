@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon addon_id="jrahmy_deferJs" title="Defer JS" version_string="2.0.0" version_id="2" url="http://xenforo.com/community/members/jeremy-p.450/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <admin_template_modifications/>
+  <code_events/>
+  <code_event_listeners>
+    <listener event_id="file_health_check" execute_order="10" callback_class="Jrahmy\DeferJs\Listener" callback_method="fileHealthCheck" active="1" hint="" description="Adds file hashes to health check"/>
+    <listener event_id="front_controller_post_view" execute_order="10" callback_class="Jrahmy\DeferJs\Listener" callback_method="frontControllerPostView" active="1" hint="" description="Moves Javascripts before &lt;/body&gt;"/>
+  </code_event_listeners>
+  <cron/>
+  <email_templates/>
+  <email_template_modifications/>
+  <optiongroups>
+    <group group_id="jrahmy_deferJs" display_order="1000" debug_only="0"/>
+    <option option_id="jrahmy_deferJs_blacklist" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value>google_ad
+show_ad
+_google
+AdBrite
+widget</default_value>
+      <edit_format_params>rows=6
+inputclass=Elastic</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="jrahmy_deferJs" display_order="0"/>
+    </option>
+  </optiongroups>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases>
+    <phrase title="option_group_jrahmy_deferJs" version_id="1" version_string="1.0.0"><![CDATA[Defer JS]]></phrase>
+    <phrase title="option_group_jrahmy_deferJs_description" version_id="1" version_string="1.0.0"><![CDATA[Options for deferring javascripts.]]></phrase>
+    <phrase title="option_jrahmy_deferJs_blacklist" version_id="2" version_string="2.0.0"><![CDATA[Blacklist]]></phrase>
+    <phrase title="option_jrahmy_deferJs_blacklist_explain" version_id="2" version_string="2.0.0"><![CDATA[Enter a unique string of text from any script tags which should not be moved. One per line.]]></phrase>
+  </phrases>
+  <route_prefixes/>
+  <style_properties/>
+  <templates/>
+  <public_template_modifications/>
+  <bb_code_media_sites/>
+</addon>
