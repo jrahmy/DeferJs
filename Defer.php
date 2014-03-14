@@ -109,7 +109,7 @@ class Defer
         $options = \XenForo_Application::get('options');
         $blacklist = explode(
             "\n",
-            str_replace("\r", '', trim($options->deferJs_blacklist))
+            str_replace("\r", '', trim($options->jrahmy_deferJs_blacklist))
         );
 
         // cycle through for matches
