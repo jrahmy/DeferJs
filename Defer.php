@@ -4,6 +4,7 @@
  * This file is part of a XenForo addon.
  *
  * (c) Jeremy P <http://xenforo.com/community/members/jeremy-p.450/>
+ * Parts derived from XFOptimise by Luke Foreman
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
