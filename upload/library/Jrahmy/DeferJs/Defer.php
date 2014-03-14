@@ -53,7 +53,7 @@ class Defer
         // scoop up unblacklisted javascripts
         $this->output = preg_replace_callback(
             '/<script.*?>.*?<\/script>/is',
-            [$this, 'collect'],
+			array($this, 'collect'),
             $this->output
         );
 
@@ -80,8 +80,8 @@ class Defer
     {
         // swap comments for CDATA
         $matches[0] = str_replace(
-            ['<!--', '-->'],
-            [' /* <![CDATA[ */ ', ' /* ]]> */ '],
+            array('<!--', '-->'),
+            array(' /* <![CDATA[ */ ', ' /* ]]> */ '),
             $matches[0]
         );
 

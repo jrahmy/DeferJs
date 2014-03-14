@@ -25,10 +25,10 @@ class FileSums
      */
     public static function getHashes()
     {
-        return [
-                'library/Jrahmy/DeferJs/Defer.php' => 'b9446cc837645f3434a595e250b8911b',
+        return array(
+                'library/Jrahmy/DeferJs/Defer.php' => 'c012b8dd6d359e268b6e60a0d4de2690',
                 'library/Jrahmy/DeferJs/Listener.php' => '8e2781624cf1286cb3c52a68563931a7',
 
-        ];
+		);
     }
 }
