@@ -27,6 +27,13 @@ class Defer
     protected $output;
 
     /**
+     * The blacklisted search terms.
+     *
+     * @var array
+     */
+    protected $blacklist;
+
+    /**
      * Concatenated deferred matches.
      *
      * @var string
@@ -41,6 +48,13 @@ class Defer
     public function __construct($output)
     {
         $this->output = $output;
+
+        // get blacklist from backend
+        $options = \XenForo_Application::get('options');
+        $this->blacklist = explode(
+            "\n",
+            str_replace("\r", '', trim($options->jrahmy_deferJs_blacklist))
+        );
     }
 
     /**
@@ -105,15 +119,8 @@ class Defer
      */
     protected function blacklisted($match)
     {
-        // get blacklist from backend
-        $options = \XenForo_Application::get('options');
-        $blacklist = explode(
-            "\n",
-            str_replace("\r", '', trim($options->jrahmy_deferJs_blacklist))
-        );
-
         // cycle through for matches
-        foreach ($blacklist as $snippet) {
+        foreach ($this->blacklist as $snippet) {
             if (stripos($match, $snippet) !== false) {
                 return true;
             }

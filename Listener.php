@@ -12,7 +12,7 @@
 namespace Jrahmy\DeferJs;
 
 /**
- * Provides static functions to extend the XenForo API.
+ * Provides static methods to extend the XenForo API.
  *
  * @author Jeremy P <http://xenforo.com/community/members/jeremy-p.450/>
  */
