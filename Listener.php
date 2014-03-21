@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of a XenForo addon.
+ * This file is part of a XenForo add-on.
  *
  * (c) Jeremy P <http://xenforo.com/community/members/jeremy-p.450/>
  *
