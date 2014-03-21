@@ -24,14 +24,14 @@ class Listener
      * @param \XenForo_FrontController $fc     The XenForo front controller.
      * @param string                   $output The view output.
      */
-    public static function frontControllerPostView(\XenForo_FrontController $fc, &$output)
+    public static function frontControllerPostView(\XenForo_FrontController $frontController, &$output)
     {
         if (strpos($output, '<html') === false) {
             return;
         }
 
-        $defer  = new Defer($output);
-        $output = $defer->defer();
+        $deferrer  = new Deferrer($output);
+        $output = $deferrer->defer();
     }
 
     /**

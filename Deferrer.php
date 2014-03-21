@@ -17,7 +17,7 @@ namespace Jrahmy\DeferJs;
  *
  * @author Jeremy P <http://xenforo.com/community/members/jeremy-p.450/>
  */
-class Defer
+class Deferrer
 {
     /**
      * The output we're filtering.
