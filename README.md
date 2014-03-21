@@ -1,6 +1,6 @@
 Defer JS
 ========
-This addon **collects javascript** in post-view output and **moves them to the
+This add-on **collects javascript** in post-view output and **moves them to the
 bottom of the page**. This has a noticeable impact on page-load times as pending
 HTTP requests postpone rendering of a page.
 
@@ -8,8 +8,8 @@ HTTP requests postpone rendering of a page.
 
 Usage
 -----
-1. Upload the addon to your XenForo installation
-2. Install the addon XML via the Administration Control Panel
+1. Upload the add-on to your XenForo installation
+2. Install the add-on XML via the Administration Control Panel
 
 License
 -------
