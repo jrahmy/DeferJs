@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of a XenForo addon.
+ * This file is part of a XenForo add-on.
  *
  * (c) Jeremy P <http://xenforo.com/community/members/jeremy-p.450/>
  * Parts derived from XFOptimise by Luke Foreman
@@ -17,7 +17,7 @@ namespace Jrahmy\DeferJs;
  *
  * @author Jeremy P <http://xenforo.com/community/members/jeremy-p.450/>
  */
-class Defer
+class Deferrer
 {
     /**
      * The output we're filtering.

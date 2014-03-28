@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of a XenForo addon.
+ * This file is part of a XenForo add-on.
  *
  * (c) Jeremy P <http://xenforo.com/community/members/jeremy-p.450/>
  *
@@ -21,17 +21,17 @@ class Listener
     /**
      * Alters front controller output.
      *
-     * @param \XenForo_FrontController $fc     The XenForo front controller.
-     * @param string                   $output The view output.
+     * @param \XenForo_FrontController $frontController The XenForo front controller.
+     * @param string                   $output          The view output.
      */
-    public static function frontControllerPostView(\XenForo_FrontController $fc, &$output)
+    public static function frontControllerPostView(\XenForo_FrontController $frontController, &$output)
     {
         if (strpos($output, '<html') === false) {
             return;
         }
 
-        $defer  = new Defer($output);
-        $output = $defer->defer();
+        $deferrer  = new Deferrer($output);
+        $output = $deferrer->defer();
     }
 
     /**

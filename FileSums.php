@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of a XenForo addon.
+ * This file is part of a XenForo add-on.
  *
  * (c) Jeremy P <http://xenforo.com/community/members/jeremy-p.450/>
  *
@@ -26,8 +26,8 @@ class FileSums
     public static function getHashes()
     {
         return [
-                'library/Jrahmy/DeferJs/Defer.php' => '24030e1b159867a88fc137f309d20f12',
-                'library/Jrahmy/DeferJs/Listener.php' => '018eb9cdebdbc9f25db764b8ab6871cd',
+                'library/Jrahmy/DeferJs/Deferrer.php' => '9af42155ea3a5813504ae79086a38025',
+                'library/Jrahmy/DeferJs/Listener.php' => 'a58ae9e30fc4ec17254cd676bdce2e87',
 
         ];
     }
