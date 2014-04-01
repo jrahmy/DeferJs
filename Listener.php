@@ -30,6 +30,11 @@ class Listener
             return;
         }
 
+        // chrome xss auditor blocks with deferred wysiwyg on post request
+        if ($frontController->getRequest()->isPost() and strpos($output, 'redactor')) {
+            return;
+        }
+
         $deferrer  = new Deferrer($output);
         $output = $deferrer->defer();
     }
