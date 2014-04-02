@@ -31,7 +31,8 @@ class Listener
         }
 
         // chrome xss auditor blocks with deferred wysiwyg on post request
-        if ($frontController->getRequest()->isPost() and strpos($output, 'redactor')) {
+        $wysiwyg = (strpos($output, 'redactor') or strpos($output, 'tinymce'));
+        if ($frontController->getRequest()->isPost() and $wysiwyg) {
             return;
         }
 
