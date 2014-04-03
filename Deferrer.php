@@ -66,7 +66,7 @@ class Deferrer
     {
         // scoop up unblacklisted javascripts
         $this->output = preg_replace_callback(
-            '/<script.*?>.*?<\/script>/is',
+            '/\s*?<script.*?>.*?<\/script>\s*?/is',
             [$this, 'collect'],
             $this->output
         );
@@ -104,7 +104,7 @@ class Deferrer
             return $matches[0];
         }
 
-        $this->deferred .= $matches[0];
+        $this->deferred .= trim($matches[0]);
 
         // remove match from output
         return '';
