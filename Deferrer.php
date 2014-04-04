@@ -50,10 +50,9 @@ class Deferrer
         $this->output = $output;
 
         // get blacklist from backend
-        $options = \XenForo_Application::get('options');
         $this->blacklist = explode(
             "\n",
-            str_replace("\r", '', trim($options->jrahmy_deferJs_blacklist))
+            str_replace("\r", '', trim(\XenForo_Application::get('options')->jrahmy_deferJs_blacklist))
         );
     }
 
