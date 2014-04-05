@@ -50,10 +50,9 @@ class Deferrer
         $this->output = $output;
 
         // get blacklist from backend
-        $options = \XenForo_Application::get('options');
         $this->blacklist = explode(
             "\n",
-            str_replace("\r", '', trim($options->jrahmy_deferJs_blacklist))
+            str_replace("\r", '', trim(\XenForo_Application::get('options')->jrahmy_deferJs_blacklist))
         );
     }
 
@@ -66,7 +65,7 @@ class Deferrer
     {
         // scoop up unblacklisted javascripts
         $this->output = preg_replace_callback(
-            '/<script.*?>.*?<\/script>/is',
+            '/\s*?<script.*?>.*?<\/script>\s*?/is',
             [$this, 'collect'],
             $this->output
         );
@@ -104,7 +103,7 @@ class Deferrer
             return $matches[0];
         }
 
-        $this->deferred .= $matches[0];
+        $this->deferred .= trim($matches[0]);
 
         // remove match from output
         return '';
