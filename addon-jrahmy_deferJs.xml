@@ -8,7 +8,7 @@
   <code_events/>
   <code_event_listeners>
     <listener event_id="file_health_check" execute_order="10" callback_class="Jrahmy\DeferJs\Listener" callback_method="fileHealthCheck" active="1" hint="" description="Adds file hashes to health check"/>
-    <listener event_id="front_controller_post_view" execute_order="10" callback_class="Jrahmy\DeferJs\Listener" callback_method="frontControllerPostView" active="1" hint="" description="Moves Javascripts before &lt;/body&gt;"/>
+    <listener event_id="front_controller_post_view" execute_order="10" callback_class="Jrahmy\DeferJs\Listener" callback_method="frontControllerPostView" active="1" hint="" description="Moves javascripts before &lt;/body&gt;"/>
   </code_event_listeners>
   <cron/>
   <email_templates/>
