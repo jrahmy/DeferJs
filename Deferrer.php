@@ -45,15 +45,10 @@ class Deferrer
      *
      * @param string $output The output to filter
      */
-    public function __construct($output)
+    public function __construct($output, array $blacklist)
     {
-        $this->output = $output;
-
-        // get blacklist from backend
-        $this->blacklist = explode(
-            "\n",
-            str_replace("\r", '', trim(\XenForo_Application::get('options')->jrahmy_deferJs_blacklist))
-        );
+        $this->output    = $output;
+        $this->blacklist = $blacklist;
     }
 
     /**
