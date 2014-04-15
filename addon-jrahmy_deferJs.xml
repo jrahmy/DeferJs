@@ -16,9 +16,9 @@
   <optiongroups>
     <group group_id="jrahmy_deferJs" display_order="1000" debug_only="0"/>
     <option option_id="jrahmy_deferJs_blacklist" edit_format="textbox" data_type="string" can_backup="1">
-      <default_value>google_ad
-show_ad
-_google</default_value>
+      <default_value>adsbygoogle
+google_ad
+show_ad</default_value>
       <edit_format_params>rows=6
 inputclass=Elastic</edit_format_params>
       <sub_options></sub_options>
@@ -34,11 +34,12 @@ inputclass=Elastic</edit_format_params>
     <phrase title="option_group_jrahmy_deferJs" version_id="1" version_string="1.0.0"><![CDATA[Defer JS]]></phrase>
     <phrase title="option_group_jrahmy_deferJs_description" version_id="1" version_string="1.0.0"><![CDATA[Options for deferring javascripts.]]></phrase>
     <phrase title="option_jrahmy_deferJs_blacklist" version_id="2" version_string="2.0.0"><![CDATA[Blacklist]]></phrase>
-    <phrase title="option_jrahmy_deferJs_blacklist_explain" version_id="2" version_string="2.0.0"><![CDATA[Enter a unique string of text from any script tags which should not be moved. One per line.]]></phrase>
+    <phrase title="option_jrahmy_deferJs_blacklist_explain" version_id="201" version_string="2.0.1"><![CDATA[List a unique string of text from any script tags which should not be moved. Use a line break between items.]]></phrase>
   </phrases>
   <route_prefixes/>
   <style_properties/>
   <templates/>
   <public_template_modifications/>
   <bb_code_media_sites/>
+  <bb_codes/>
 </addon>
