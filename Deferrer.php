@@ -43,7 +43,8 @@ class Deferrer
     /**
      * Constructor.
      *
-     * @param string $output The output to filter
+     * @param string $output    The output to filter
+     * @param array  $blacklist An array of blacklisted snippets.
      */
     public function __construct($output, array $blacklist)
     {
