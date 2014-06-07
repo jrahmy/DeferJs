@@ -31,8 +31,7 @@ class Listener
         }
 
         // breaks some admin functionality
-        if ($frontController->getDependencies() instanceof \XenForo_Dependencies_Admin)
-        {
+        if ($frontController->getDependencies() instanceof \XenForo_Dependencies_Admin) {
             return;
         }
 
