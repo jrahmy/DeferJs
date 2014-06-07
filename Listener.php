@@ -30,6 +30,12 @@ class Listener
             return;
         }
 
+        // breaks some admin functionality
+        if ($frontController->getDependencies() instanceof \XenForo_Dependencies_Admin)
+        {
+            return;
+        }
+
         // chrome xss auditor blocks with deferred wysiwyg on post request
         $wysiwyg = (strpos($output, 'redactor') or strpos($output, 'tinymce'));
         if ($frontController->getRequest()->isPost() and $wysiwyg) {
