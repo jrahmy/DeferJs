@@ -27,7 +27,7 @@ class FileSums
     {
         return [
                 'library/Jrahmy/DeferJs/Deferrer.php' => 'a7a9af7718542c083f6866cdb0125509',
-                'library/Jrahmy/DeferJs/Listener.php' => '23e621a110e54ff2487d4a0116958527',
+                'library/Jrahmy/DeferJs/Listener.php' => '94a2dfce4972df6f51ec5a7bc454d780',
 
         ];
     }
