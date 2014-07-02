@@ -44,7 +44,7 @@ class Listener
         // get blacklist from backend
         $blacklist = explode(
             "\n",
-            str_replace("\r", '', trim(\XenForo_Application::get('options')->jrahmy_deferJs_blacklist))
+            str_replace("\r", '', trim(\XenForo_Application::getOptions()->jrahmy_deferJs_blacklist))
         );
 
         $deferrer  = new Deferrer($output, $blacklist);
