@@ -26,8 +26,8 @@ class FileSums
     public static function getHashes()
     {
         return [
+                'library/Jrahmy/DeferJs/Listener.php' => '8f7a41e1b4765828a5c7c316c083515d',
                 'library/Jrahmy/DeferJs/Deferrer.php' => 'a7a9af7718542c083f6866cdb0125509',
-                'library/Jrahmy/DeferJs/Listener.php' => '94a2dfce4972df6f51ec5a7bc454d780',
 
         ];
     }
