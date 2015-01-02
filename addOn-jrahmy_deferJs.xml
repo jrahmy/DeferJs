@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<addon addon_id="jrahmy_deferJs" title="Defer JS" version_string="2.2.0" version_id="220" url="https://xenforo.com/community/resources/defer-js.2972/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+<addon addon_id="jrahmy_deferJs" title="Defer JS" version_string="2.2.1" version_id="221" url="http://xenforo.com/community/resources/defer-js.2972/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
   <admin_navigation/>
   <admin_permissions/>
   <admin_style_properties/>
@@ -17,8 +17,8 @@
     <group group_id="jrahmy_deferJs" display_order="1000" debug_only="0"/>
     <option option_id="jrahmy_deferJs_blacklist" edit_format="textbox" data_type="string" can_backup="1">
       <default_value>adsbygoogle
-google_ads
-show_ads</default_value>
+google_ad
+show_ad</default_value>
       <edit_format_params>rows=6
 inputclass=Elastic</edit_format_params>
       <sub_options></sub_options>
@@ -34,7 +34,8 @@ inputclass=Elastic</edit_format_params>
     <phrase title="option_group_jrahmy_deferJs" version_id="1" version_string="1.0.0"><![CDATA[Defer JS]]></phrase>
     <phrase title="option_group_jrahmy_deferJs_description" version_id="1" version_string="1.0.0"><![CDATA[Options for deferring javascripts.]]></phrase>
     <phrase title="option_jrahmy_deferJs_blacklist" version_id="2" version_string="2.0.0"><![CDATA[Blacklist]]></phrase>
-    <phrase title="option_jrahmy_deferJs_blacklist_explain" version_id="201" version_string="2.0.1"><![CDATA[List a unique string of text from any script tags which should not be moved. Use a line break between items.]]></phrase>
+    <phrase title="option_jrahmy_deferJs_blacklist_explain" version_id="220" version_string="2.2.0"><![CDATA[List a unique string of text from any script tags which should not be moved. Use a line break between items.<br><br>
+<strong>If you have any scripts in IE conditionals, you must blacklist them!</strong>]]></phrase>
   </phrases>
   <route_prefixes/>
   <style_properties/>
