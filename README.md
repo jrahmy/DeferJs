@@ -11,6 +11,8 @@ Usage
 1. Upload the add-on to your XenForo installation
 2. Install the add-on XML via the Administration Control Panel
 
+**If you have any scripts in IE conditionals, you must blacklist them!**
+
 License
 -------
 For the full copyright and license information, please view the LICENSE file
