@@ -26,6 +26,7 @@ class Listener
      */
     public static function frontControllerPostView(\XenForo_FrontController $frontController, &$output)
     {
+        // only run on html pages
         if (strpos($output, '<html') === false) {
             return;
         }
