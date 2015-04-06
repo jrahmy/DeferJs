@@ -21,8 +21,8 @@ class Listener
     /**
      * Alters front controller output.
      *
-     * @param \XenForo_FrontController $frontController The XenForo front controller.
-     * @param string                   $output          The view output.
+     * @param \XenForo_FrontController $frontController The XenForo front controller
+     * @param string                   $output          The view output
      */
     public static function frontControllerPostView(\XenForo_FrontController $frontController, &$output)
     {

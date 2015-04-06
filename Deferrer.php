@@ -44,7 +44,7 @@ class Deferrer
      * Constructor.
      *
      * @param string $output    The output to filter
-     * @param array  $blacklist An array of blacklisted snippets.
+     * @param array  $blacklist An array of blacklisted snippets
      */
     public function __construct($output, array $blacklist)
     {
@@ -55,7 +55,7 @@ class Deferrer
     /**
      * Defer all (un)matching javascripts.
      *
-     * @return string The filtered output.
+     * @return string The filtered output
      */
     public function defer()
     {
@@ -81,9 +81,9 @@ class Deferrer
      * Collect unblacklisted scripts into the deferred property. To be used
      * with preg_replace_callback().
      *
-     * @param array $matches An array of matches.
+     * @param array $matches An array of matches
      *
-     * @return string The matched JS if blacklisted, or nothing otherwise.
+     * @return string The matched JS if blacklisted, or nothing otherwise
      */
     protected function collect($matches)
     {
@@ -108,9 +108,9 @@ class Deferrer
     /**
      * Check if the given match contains any blacklisted code.
      *
-     * @param string $match The match to search.
+     * @param string $match The match to search
      *
-     * @return bool True if blacklisted, false if not.
+     * @return bool True if blacklisted, false if not
      */
     protected function blacklisted($match)
     {
