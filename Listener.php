@@ -32,7 +32,16 @@ class Listener
         }
 
         // breaks some admin functionality
-        if ($frontController->getDependencies() instanceof \XenForo_Dependencies_Admin) {
+        if ($frontController->getDependencies() instanceof
+            \XenForo_Dependencies_Admin
+        ) {
+            return;
+        }
+
+        // disable for attachment output (in case of HTML attachments)
+        if ($frontController->route()->getControllerName() ===
+            'XenForo_ControllerPublic_Attachment'
+        ) {
             return;
         }
 
@@ -45,7 +54,13 @@ class Listener
         // get blacklist from backend
         $blacklist = explode(
             "\n",
-            str_replace("\r", '', trim(\XenForo_Application::getOptions()->jrahmy_deferJs_blacklist))
+            str_replace(
+                "\r",
+                '',
+                trim(
+                    \XenForo_Application::getOptions()->jrahmy_deferJs_blacklist
+                )
+            )
         );
 
         $deferrer  = new Deferrer($output, $blacklist);
