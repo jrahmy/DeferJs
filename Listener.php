@@ -3,10 +3,10 @@
 /*
  * This file is part of a XenForo add-on.
  *
- * (c) Jeremy P <http://xenforo.com/community/members/jeremy-p.450/>
+ * (c) Jeremy P <https://xenforo.com/community/members/jeremy-p.450/>
  *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * For the full copyright and license information, please view the LICENSE file
+ * that was distributed with this source code.
  */
 
 namespace Jrahmy\DeferJs;
@@ -14,7 +14,7 @@ namespace Jrahmy\DeferJs;
 /**
  * Provides static methods to extend the XenForo API.
  *
- * @author Jeremy P <http://xenforo.com/community/members/jeremy-p.450/>
+ * @author Jeremy P <https://xenforo.com/community/members/jeremy-p.450/>
  */
 class Listener
 {
@@ -26,14 +26,9 @@ class Listener
      */
     public static function frontControllerPostView(\XenForo_FrontController $frontController, &$output)
     {
-        // only run on html pages
-        if (strpos($output, '<html') === false) {
-            return;
-        }
-
-        // breaks some admin functionality
-        if ($frontController->getDependencies() instanceof
-            \XenForo_Dependencies_Admin
+        // only run on public pages
+        if (!$frontController->getDependencies() instanceof
+            \XenForo_Dependencies_Public
         ) {
             return;
         }
@@ -42,6 +37,11 @@ class Listener
         if ($frontController->route()->getControllerName() ===
             'XenForo_ControllerPublic_Attachment'
         ) {
+            return;
+        }
+
+        // only run on html pages
+        if (strpos($output, '<html') === false) {
             return;
         }
 
@@ -73,8 +73,10 @@ class Listener
      * @param \XenForo_ControllerAdmin_Abstract $controller The current admin controller
      * @param array                             $hashes     An array of filesums
      */
-    public static function fileHealthCheck(\XenForo_ControllerAdmin_Abstract $controller, array &$hashes)
-    {
+    public static function fileHealthCheck(
+        \XenForo_ControllerAdmin_Abstract $controller,
+        array &$hashes
+    ) {
         $hashes += FileSums::getHashes();
     }
 }

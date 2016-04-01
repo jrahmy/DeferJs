@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<addon addon_id="jrahmy_deferJs" title="Defer JS" version_string="2.2.3" version_id="223" url="http://xenforo.com/community/resources/defer-js.2972/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+<addon addon_id="jrahmy_deferJs" title="Defer JS" version_string="2.2.4" version_id="224" url="http://xenforo.com/community/resources/defer-js.2972/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
   <admin_navigation/>
   <admin_permissions/>
   <admin_style_properties/>
