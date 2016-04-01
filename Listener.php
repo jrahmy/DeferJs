@@ -3,10 +3,10 @@
 /*
  * This file is part of a XenForo add-on.
  *
- * (c) Jeremy P <http://xenforo.com/community/members/jeremy-p.450/>
+ * (c) Jeremy P <https://xenforo.com/community/members/jeremy-p.450/>
  *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * For the full copyright and license information, please view the LICENSE file
+ * that was distributed with this source code.
  */
 
 namespace Jrahmy\DeferJs;
@@ -14,7 +14,7 @@ namespace Jrahmy\DeferJs;
 /**
  * Provides static methods to extend the XenForo API.
  *
- * @author Jeremy P <http://xenforo.com/community/members/jeremy-p.450/>
+ * @author Jeremy P <https://xenforo.com/community/members/jeremy-p.450/>
  */
 class Listener
 {
