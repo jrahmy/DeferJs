@@ -26,14 +26,9 @@ class Listener
      */
     public static function frontControllerPostView(\XenForo_FrontController $frontController, &$output)
     {
-        // only run on html pages
-        if (strpos($output, '<html') === false) {
-            return;
-        }
-
-        // breaks some admin functionality
-        if ($frontController->getDependencies() instanceof
-            \XenForo_Dependencies_Admin
+        // only run on public pages
+        if (!$frontController->getDependencies() instanceof
+            \XenForo_Dependencies_Public
         ) {
             return;
         }
@@ -42,6 +37,11 @@ class Listener
         if ($frontController->route()->getControllerName() ===
             'XenForo_ControllerPublic_Attachment'
         ) {
+            return;
+        }
+
+        // only run on html pages
+        if (strpos($output, '<html') === false) {
             return;
         }
 
