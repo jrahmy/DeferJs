@@ -1,8 +1,9 @@
 Defer JS
 ========
-This add-on **collects javascript** in post-view output and **moves them to the
-bottom of the page**. This has a noticeable impact on page-load times as pending
-HTTP requests postpone rendering of a page.
+This add-on **moves javascripts** in page output **to the bottom of the page**.
+This has a noticeable impact on page-load times as pending HTTP requests
+postpone rendering of a page, while scripts aren't run until everything is
+loaded anyways.
 
 -------------------------------------------------------------------------------
 
