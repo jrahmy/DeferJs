@@ -73,8 +73,10 @@ class Listener
      * @param \XenForo_ControllerAdmin_Abstract $controller The current admin controller
      * @param array                             $hashes     An array of filesums
      */
-    public static function fileHealthCheck(\XenForo_ControllerAdmin_Abstract $controller, array &$hashes)
-    {
+    public static function fileHealthCheck(
+        \XenForo_ControllerAdmin_Abstract $controller,
+        array &$hashes
+    ) {
         $hashes += FileSums::getHashes();
     }
 }
