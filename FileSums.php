@@ -3,10 +3,10 @@
 /*
  * This file is part of a XenForo add-on.
  *
- * (c) Jeremy P <http://xenforo.com/community/members/jeremy-p.450/>
+ * (c) Jeremy P <https://xenforo.com/community/members/jeremy-p.450/>
  *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * For the full copyright and license information, please view the LICENSE file
+ * that was distributed with this source code.
  */
 
 namespace Jrahmy\DeferJs;
@@ -14,7 +14,7 @@ namespace Jrahmy\DeferJs;
 /**
  * Filesums for XenForo File Health Check.
  *
- * @author Jeremy P <http://xenforo.com/community/members/jeremy-p.450/>
+ * @author Jeremy P <https://xenforo.com/community/members/jeremy-p.450/>
  */
 class FileSums
 {
@@ -26,8 +26,8 @@ class FileSums
     public static function getHashes()
     {
         return [
-                'library/Jrahmy/DeferJs/Listener.php' => 'a50e79756dc6d317fb0a3de9a96e64a9',
-                'library/Jrahmy/DeferJs/Deferrer.php' => '9a3bff68f7f35490e1c59c1530282963',
+                'library/Jrahmy/DeferJs/Listener.php' => '0611e3df9f2b03d5b07aa4d450582663',
+                'library/Jrahmy/DeferJs/Deferrer.php' => '45ed56aa28f40b9ac3a27e013d84ff4a',
 
         ];
     }
