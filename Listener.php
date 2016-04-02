@@ -24,8 +24,10 @@ class Listener
      * @param \XenForo_FrontController $frontController The XenForo front controller
      * @param string                   $output          The view output
      */
-    public static function frontControllerPostView(\XenForo_FrontController $frontController, &$output)
-    {
+    public static function frontControllerPostView(
+        \XenForo_FrontController $frontController,
+        &$output
+    ) {
         // only run on public pages
         if (!$frontController->getDependencies() instanceof
             \XenForo_Dependencies_Public
